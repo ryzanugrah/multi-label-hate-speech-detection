@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "multi-label-hate-speech-detection"
+version = "0.1.0"
+description = ""
+authors = ["Rizky Anugerah"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+streamlit = "^1.9.0"
+black = "^22.3.0"
+isort = "^5.10.1"
+tweepy = "^4.9.0"
+torch = "^1.11.0"
+gdown = "^4.4.0"
+pyunpack = "^0.2.2"
+transformers = "^4.18.0"
+st-material-table = "^0.0.4"
+streamlit-metrics = "^0.1.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black" 
