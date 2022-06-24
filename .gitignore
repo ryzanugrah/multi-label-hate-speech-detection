@@ -28,7 +28,7 @@ venv/
 venv.bak/
 
 # Packages
-apps/indonlu/
+# apps/indonlu/
 
 # Model
 models/pytorch_model.bin

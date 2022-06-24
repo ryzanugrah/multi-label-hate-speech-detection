@@ -398,7 +398,7 @@ def single_tweet_detection(text):
 
     logits = model(subwords)[0]
     label = torch.topk(logits, k=1, dim=-1)[1].squeeze().item()
-    probability = f"{F.softmax(logits, dim=-1).squeeze()[label] * 100:.3f}"
+    probability = f"{F.softmax(logits, dim=-1).squeeze()[label] * 100:.0f}"
     result = single_tweet_labelling(label)
 
     return result, probability
