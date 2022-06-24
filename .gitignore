@@ -34,4 +34,4 @@ venv.bak/
 models/pytorch_model.bin
 
 # Streamlit
-# .streamlit/secrets.toml
+.streamlit/secrets.toml
