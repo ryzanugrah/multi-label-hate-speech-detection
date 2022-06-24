@@ -53,9 +53,9 @@ with open(tokenizer_path, "rb") as handle:
 # Instantiate trained model
 config = BertConfig.from_pretrained("./models/config.json")
 
-# url = "https://drive.google.com/"
-output = "./models/pytorch_model.bin"
-# gdown.download(url, output, quiet=False)
+url = "https://drive.google.com/u/0/uc?id=11TZavHOFMZ9fjsxZU3T34FuzbrU1uvIf"
+output = "pytorch_model.bin"
+gdown.download(url, output, quiet=False)
 model = BertForSequenceClassification.from_pretrained(output, config=config)
 
 preprocess_input = lambda x: preprocessing(x)
