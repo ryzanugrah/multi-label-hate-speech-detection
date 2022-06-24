@@ -20,15 +20,18 @@ docs/_build/
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
 #   commonly ignored for libraries.
 #   https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
-#poetry.lock
+# poetry.lock
 
 # Environments
 .venv
 venv/
 venv.bak/
 
+# Packages
+apps/indonlu/
+
 # Model
 models/pytorch_model.bin
 
 # Streamlit
-.streamlit/secrets.toml
+# .streamlit/secrets.toml

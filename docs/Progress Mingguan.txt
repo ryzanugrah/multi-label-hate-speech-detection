@@ -2,7 +2,7 @@ PROGRESS SKRIPSI
 
 Nama: Rizky Anugerah
 NPM: 140810180049
-Judul: SISTEM DETEKSI HATE SPEECH BERBAHASA INDONESIA MENGGUNAKAN 
+Judul: SISTEM DETEKSI HATE SPEECH BERBAHASA INDONESIA MENGGUNAKAN
        METODE INDONESIAN BIDIRECTIONAL ENCODER REPRESENTATIONS FROM TRANSFORMERS (INDOBERT)
 
 ===================================================================================================
@@ -13,22 +13,22 @@ PROGRESS PERTEMUAN KE-1 || 16 FEBRUARI 2022
 # Code
   * Persiapan code python
   * Menambah codingan untuk split dataset menjadi 3 file CSV (train, test, validation)
-	  
+
 # Laporan Skripsi
-  * Memindahkan isi laporan proposal skripsi ke laporan skripsi dan menyesuaikan isi dengan 
+  * Memindahkan isi laporan proposal skripsi ke laporan skripsi dan menyesuaikan isi dengan
     template skripsi yang diberikan
 
 # Kendala
   * Tidak ada
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-2 || 17 FEBRUARI 2022 - 23 FEBRUARI 2022
 --------------------------------------------------------------
 
 # Code
   * Menambah codingan Text Preprocessing (Data Cleaning, Case Folding, Normalization, dan Stemming)
-	  
+
 # Laporan Skripsi
   * Bab I
     1.1 Menambah sub-bab Latar Belakang
@@ -43,13 +43,13 @@ PROGRESS PERTEMUAN KE-2 || 17 FEBRUARI 2022 - 23 FEBRUARI 2022
   * Tidak ada
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-3 || 24 FEBRUARI 2022 - 2 MARET 2022
 ----------------------------------------------------------
 
 # Code
   * Menambah codingan IndoBERT (Model Pretrained, Fine Tuning, dan Confusion Matrix)
-	  
+
 # Laporan Skripsi
   * Bab I
     1.6 Menambah sub bab Metodologi Penelitian
@@ -62,7 +62,7 @@ PROGRESS PERTEMUAN KE-3 || 24 FEBRUARI 2022 - 2 MARET 2022
         2.1.4 Menambah sub-sub bab Natural Language Processing
         2.1.6 Menambah sub-sub bab Text Preprocessing beserta langkah-langkahnya
         2.1.7 Menambah sub-sub bab Bidirectional Encoder Representations from Transformers (BERT)
-        2.1.8 Menambah sub-sub bab Indonesian Bidirectional Encoder Representations from 
+        2.1.8 Menambah sub-sub bab Indonesian Bidirectional Encoder Representations from
               Transformers (IndoBERT)
         2.1.9 Menambah sub-sub bab Confusion Matrix
 
@@ -71,13 +71,13 @@ PROGRESS PERTEMUAN KE-3 || 24 FEBRUARI 2022 - 2 MARET 2022
   * Error saat menambah codingan Cross Validation
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-4 || 3 MARET 2022 - 9 MARET 2022
 ------------------------------------------------------
 
 # Code
   * Menambah codingan Text Preprocessing (Filtering)
-	  
+
 # Laporan Skripsi
   * Bab II
     2.1 Merubah sub bab Landasan Teori
@@ -85,28 +85,28 @@ PROGRESS PERTEMUAN KE-4 || 3 MARET 2022 - 9 MARET 2022
         2.1.10 Menambah sub-sub bab Metode Waterfall
   * Bab III
     3.1 Menambah sub bab Fase Perencanaan Kebutuhan
-        3.1.2 Menambah sub-sub bab Kebutuhan Perangkat Lunak 
-        3.1.3 Menambah sub-sub bab Kebutuhan Perangkat keras 
+        3.1.2 Menambah sub-sub bab Kebutuhan Perangkat Lunak
+        3.1.3 Menambah sub-sub bab Kebutuhan Perangkat keras
     3.2 Menambah sub bab Fase Perancangan Desain
         3.2.1 Menambah sub-sub bab Deskripsi Aplikasi
-        3.2.4 Menambah sub-sub bab Timeline Penjadwalan Penelitian 
+        3.2.4 Menambah sub-sub bab Timeline Penjadwalan Penelitian
 
 # Kendala
   * Error saat mencoba merubah codingan klasifikasi label menjadi 4 label
   * Error saat menambah codingan Cross Validation
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-5 || 10 MARET 2022 - 16 MARET 2022
 --------------------------------------------------------
 
 # Code
-  * Menambah codingan klasifikasi label menjadi 4 label 
-	  
+  * Menambah codingan klasifikasi label menjadi 4 label
+
 # Laporan Skripsi
   * Bab II
     2.1 Merubah sub bab Landasan Teori
-        2.1.11 Menambah sub-sub bab Python 
+        2.1.11 Menambah sub-sub bab Python
   * Bab III
     3.1 Merubah sub bab Fase Perencanaan Kebutuhan
         3.1.2 Menambah sub-sub bab Objek Penelitian
@@ -123,16 +123,16 @@ PROGRESS PERTEMUAN KE-5 || 10 MARET 2022 - 16 MARET 2022
   * Error saat menambah codingan Cross Validation
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-6 || 17 MARET 2022 - 23 MARET 2022
 --------------------------------------------------------
 
 # Code
   * Merubah codingan untuk konfigurasi hyperparameter yang digunakan
-	  
+
 # Laporan Skripsi
   * Bab I
-    1.6 Merubah sub bab Metodologi Penelitian dengan menambahkan seluruh penjelasan tahapan yang 
+    1.6 Merubah sub bab Metodologi Penelitian dengan menambahkan seluruh penjelasan tahapan yang
         akan dilakukan pada penelitian ini
   * Bab II
     2.1 Merubah sub bab Landasan Teori dengan menghapus sub-sub bab metode Waterfall
@@ -144,7 +144,7 @@ PROGRESS PERTEMUAN KE-6 || 17 MARET 2022 - 23 MARET 2022
         3.1.4 Menambah sub-sub bab Pengumpulan dan Persiapan Data
     3.2 Merubah nama sub bab menjadi Fase Perancangan Sistem
         3.2.1 Mengganti nama sub-sub bab menjadi Pengolahan Data
-        3.2.2 Mengganti nama sub-sub bab menjadi Pemodelan Data dan menambah konfigurasi untuk 
+        3.2.2 Mengganti nama sub-sub bab menjadi Pemodelan Data dan menambah konfigurasi untuk
               hyperparameter yang akan digunakan pada proses training data
   * Bab IV
     4.1 Menambah sub bab Fase Evaluasi dan Pengujian Model
@@ -155,41 +155,41 @@ PROGRESS PERTEMUAN KE-6 || 17 MARET 2022 - 23 MARET 2022
     topik penelitian ini
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-7 || 24 MARET 2022 - 30 MARET 2022
 --------------------------------------------------------
 
 # Code
   * Menambahkan kode untuk menampilkan chart dengan library matplotlib
   * Menambahkan kode untuk menghilangkan missing value (NaN)
-  * Menambahkan kode untuk meng-handle data Imbalance dengan metode Synthetic Minority 
+  * Menambahkan kode untuk meng-handle data Imbalance dengan metode Synthetic Minority
     Over-sampling Technique (SMOTE)
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-8 || 31 MARET 2022 - 06 APRIL 2022
 --------------------------------------------------------
 
 # Code
-  * Menghitung serta membandingkan semua hasil performance metrics pada data imbalance dan balance 
-	  
+  * Menghitung serta membandingkan semua hasil performance metrics pada data imbalance dan balance
+
 # Laporan Skripsi
   * Bab III
     Melengkapi penjelasan pada setiap sub-bab
 
 # Kendala
   * Nilai akurasi rendah pada penerapan 4 label (dibawah 80%)
-  * Bingung apakah ingin mengklasifikasikan data menjadi 2 label atau 4 label dikarenakan hasil 
+  * Bingung apakah ingin mengklasifikasikan data menjadi 2 label atau 4 label dikarenakan hasil
     yang kurang memuaskan pada klasifikasi 4 label
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-9 || 07 APRIL 2022 - 13 APRIL 2022
 --------------------------------------------------------
 
 # Code
   * Mengeksplor konfigurasi hyperparameter yang digunakan agar mendapat hasil yang paling optimal
-	  
+
 # Laporan Skripsi
   * Bab III
     Melengkapi penjelasan dan menambah flowchart pada setiap sub-bab
@@ -203,14 +203,14 @@ PROGRESS PERTEMUAN KE-9 || 07 APRIL 2022 - 13 APRIL 2022
   * Bingung menentukan konfigurasi hyperparameter yang pas
 
 ===================================================================================================
-	
+
 PROGRESS PERTEMUAN KE-10 || 14 APRIL 2022 - 20 APRIL 2022
 ---------------------------------------------------------
 
 # Code
-  * Melakukan pengujian dengan hyperparameter yang diuji yaitu `batch size, learning rate, dan 
-    epoch`, alasan kenapa hyperparameter tersebut yang dipilih karena direkomendasikan oleh peneliti 
-    Devlin dkk (https://arxiv.org/pdf/1810.04805.pdf). Nilai dari masing-masing parameter sebagai 
+  * Melakukan pengujian dengan hyperparameter yang diuji yaitu `batch size, learning rate, dan
+    epoch`, alasan kenapa hyperparameter tersebut yang dipilih karena direkomendasikan oleh peneliti
+    Devlin dkk (https://arxiv.org/pdf/1810.04805.pdf). Nilai dari masing-masing parameter sebagai
     berikut:
     ```
     Batch size: 16, 32
@@ -218,7 +218,7 @@ PROGRESS PERTEMUAN KE-10 || 14 APRIL 2022 - 20 APRIL 2022
     Number of epochs: 2, 3, 4
     ```
   * Melakukan pengujian hyperparameter tuning dengan kombinasi sebanyak 18 kali percobaan
-  * Performance metrics yang akan digunakan sebagai pembanding untuk setiap percobaan yaitu 
+  * Performance metrics yang akan digunakan sebagai pembanding untuk setiap percobaan yaitu
     `f1-score macro avg`
   * Nilai `f1-score macro avg` paling besar yaitu dengan nilai hyperparameter sebagai berikut:
     ```
@@ -232,9 +232,9 @@ PROGRESS PERTEMUAN KE-10 || 14 APRIL 2022 - 20 APRIL 2022
     Number of epochs: 4
     F1-score Macro avg: 0.71
     ```
-  * Hasil lengkapnya bisa dilihat di 
+  * Hasil lengkapnya bisa dilihat di
     https://docs.google.com/spreadsheets/d/1tOi-sexeAKhVQ7hdbNQxHb6x3nhxmbdU9qsPORQcPvM/edit?usp=sharing
-	  
+
 # Laporan Skripsi
   * Bab III
     3.3 Menambah sub bab Fase Evaluasi dan Pengujian Model
@@ -243,24 +243,28 @@ PROGRESS PERTEMUAN KE-10 || 14 APRIL 2022 - 20 APRIL 2022
 # Kendala
   * Gagal menerapkan grid search untuk lebih cepat menentukan hyperparameter yang optimal
   * Library raytune gagal diterapkan di penelitian ini (fungsi library sama seperti grid search)
-  * Saat code raytune dijalankan, code stuck dengan output `pending`. Mungkin alasannya karena 
-    raytune tidak mendeteksi GPU dari Google Colab (?). Jadi semua percobaan training dilakukan 
+  * Saat code raytune dijalankan, code stuck dengan output `pending`. Mungkin alasannya karena
+    raytune tidak mendeteksi GPU dari Google Colab (?). Jadi semua percobaan training dilakukan
     dengan cara manual (satu-satu dibuat file terpisah)
 
 ===================================================================================================
-	
-PROGRESS PERTEMUAN KE-11 || 21 APRIL 2022 - 11 MEI 2022
+
+PROGRESS PERTEMUAN KE-11 || 21 APRIL 2022 - 18 MEI 2022
 -------------------------------------------------------
 
 # Code
-  * Melakukan fine tuning kembali dengan kombinasi hyperparameter yang berbeda
+  * Melakukan fine tuning kembali pada dataset balance dengan kombinasi hyperparameter yang sama
+    dengan percobaan pada dataset imbalance
   * Menambah kode untuk menyimpan hasil model yang telah di-train
   * Merubah struktur project dengan menerapkan Python virtual environment (venv)
   * Menginstal Pyenv untuk Python Version Management
   * Menginstal Poetry untuk Python Package dan Environment Management
   * Menambah kode penerapan aplikasi website (Streamlit)
-	  
+
 # Laporan Skripsi
+  * Bab III
+    3.3 Merubah sub bab Fase Evaluasi dan Pengujian Model
+        3.3.2 Menambah sub-sub bab Pengujian Model
   * Bab IV
     4.1 Menambah sub bab Hasil Pengumpulan dan Persiapan Data
     4.2 Menambah sub bab Hasil Pengolahan Data
@@ -268,29 +272,79 @@ PROGRESS PERTEMUAN KE-11 || 21 APRIL 2022 - 11 MEI 2022
     4.4 Menambah sub bab Hasil Evaluasi dan Pengujian Model
 
 # Kendala
-  * Hasil F1-score macro average mentok di angka 0.73
+  * Hasil Accuracy dan F1-score macro average tertinggi di angka 0.73
   * Kesulitan untuk mengembangkan kode penerapan aplikasi website dengan Streamlit karena kodenya
     lumayan kompleks
 
 ===================================================================================================
-	
-PROGRESS PERTEMUAN KE-12 || 11 MEI 2022 - 18 MEI 2022
--------------------------------------------------------
+
+PROGRESS PERTEMUAN KE-12 || 18 MEI 2022 - 25 MEI 2022
+-----------------------------------------------------
 
 # Code
-  * Melakukan fine tuning kembali pada dataset balance dengan kombinasi hyperparameter yang sama 
-    dengan percobaan pada dataset imbalance
-  * Merubah beberapa kode minor pada script penerapan aplikasi
-	  
+  * Mengkesplor kode penerapan aplikasi website (Streamlit) agar bisa menjalankan semua proses,
+    dari training sampai dengan implementasi website
+
 # Laporan Skripsi
-  * Bab III
-    3.3 Merubah sub bab Fase Evaluasi dan Pengujian Model
-        3.3.2 Menambah sub-sub bab Pengujian Model
   * Bab IV
-    4.1 Menambah kode program pada sub bab Hasil Pengumpulan dan Persiapan Data
-    4.2 Menambah kode program pada sub bab Hasil Pengolahan Data
-    4.3 Menambah kode program pada sub bab Hasil Pembagian Data
-    4.4 Menambah kode program pada sub bab Hasil Evaluasi dan Pengujian Model
+    4.4 Menambah isi perbandingan hasil pengujian pada sub bab Hasil Evaluasi dan Pengujian Model
 
 # Kendala
-  * Tidak ada
+  * Kesulitan dalam mengembangkan kode penerapan aplikasi website agar bisa menjalankan sistem
+    dari proses training
+
+===================================================================================================
+
+PROGRESS PERTEMUAN KE-13 || 26 MEI 2022 - 8 JUNI 2022
+-----------------------------------------------------
+
+# Code
+  * Mengkesplor kode penerapan aplikasi website (Streamlit) agar bisa menjalankan semua proses,
+    dari training sampai dengan implementasi website
+
+# Laporan Skripsi
+  * Bab II
+    2.1 Merubah sub bab Landasan Teori
+        2.1.11 Menambah sub-sub bab Unified Modeling Language (UML)
+  * Bab III
+    3.4 Menambah sub bab Fase Implementasi Sistem
+        3.4.1 Menambah sub-sub bab Perancangan Halaman Antarmuka Sistem
+        3.4.2 Menambah sub-sub bab Pengembangan Sistem
+        3.4.3 Menambah sub-sub bab Pengujian Sistem
+  * Bab IV
+    4.4 Menambah isi perbandingan hasil pengujian pada sub bab Hasil Evaluasi dan Pengujian Model
+
+# Kendala
+  * Jika program dijalankan tanpa GPU/CUDA, proses eksekusi programnya jauh lebih lama (ETA bisa
+    sampai berjam-jam)
+  * Simulasi training pada program/website lebih lambat dan lebih memberatkan kinerja perangkat
+    sehingga proses eksekusi programnya jauh lebih lama bila dibandingkan dengan Google Colab
+
+===================================================================================================
+
+PROGRESS PERTEMUAN KE-14 || 8 JUNI 2022 - 15 JUNI 2022
+------------------------------------------------------
+
+# Code
+  * Menambah file stopword tanpa berisi kata-kata negasi (tidak, jangan, dll)
+  * Mengganti diagram garis pada hasil training menjadi diagram batang (plot bar)
+  * Memindahkan info hyperparameter pada halaman training ke sidebar
+  * Menambah halaman awal
+  * Menambah halaman training model terbaik
+  * Clean dan optimasi kode
+
+# Laporan Skripsi
+  * Merapikan daftar tabel, daftar gambar, daftar lampiran, rumus persamaan, daftar pustaka, dan 
+    lampiran
+  * Menambah abstrak
+  * Bab I
+    1.1 Memperbarui latar belakang
+  * Bab II
+    2.1 Memperbarui landasan teori
+  * Bab IV
+    4.5 Memperbarui bentuk confusion matrix menjadi tabel pada sub bab Hasil Evaluasi dan Pengujian
+        Model
+    4.6 Menambah sub bab Hasil Implementasi Sistem
+  * Bab V
+    5.1 Menambah sub bab Kesimpulan
+    5.2 Menambah sub bab Saran
