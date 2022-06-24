@@ -28,7 +28,23 @@ def main():
         with st.container():
             st.subheader("Abstrak")
 
-            st.write("JANGAN LP DIISI")
+            st.write(
+                "Saat ini penggunaan internet paling banyak digunakan untuk mengakses media sosial. "
+                "Namun banyak masyarakat yang menyalahgunakan media sosial dengan memposting kalimat "
+                "bernada ujaran kebencian atau hate speech. Dengan merebaknya postingan media sosial di "
+                "Indonesia yang bernada ujaran kebencian atau hate speech, membuat suatu sistem yang dapat "
+                "mendeteksi hate speech pada teks bahasa Indonesia merupakan langkah yang sangat tepat agar "
+                "masyarakat tidak lagi sembarangan dalam memposting kalimat bernada hate speech.\n\nUntuk itu "
+                "penulis membuat sistem deteksi hate speech berbasis Deep Learning pada teks berbahasa Indonesia "
+                "dengan metode IndoBERT yang digunakan untuk mengklasifikasikan teks yang bermakna hate speech "
+                "dan non-hate speech. Data pada penelitian ini didapatkan dari dataset yang sudah dibangun dan "
+                "dilabeli dari penelitian (Ibrohim & Budi, 2019). Total data yang didapatkan sebanyak 13169 data "
+                "yang terdiri dari 4 label, yaitu Non-Hate Speech sebanyak 5860 data, Weak Hate Speech sebanyak "
+                "3383 data, Moderate Hate Speech sebanyak 1705 data, dan Strong Hate Speech sebanyak 2221 data.\n\nHasil "
+                "pada penelitian ini menghasilkan nilai f1-score (macro avg) sebesar 76% pada data imbalance dan nilai "
+                "accuracy sebesar 77% pada data balance dengan set hyperparameter yang digunakan pada dua data tersebut "
+                "yaitu optimizer AdamW, activation function softmax, batch size 16, learning rate 2e-5, dan epoch 3."
+            )
 
         st.markdown("""---""")
 
