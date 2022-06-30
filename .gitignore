@@ -31,7 +31,7 @@ venv.bak/
 # apps/indonlu/
 
 # Model
-models/pytorch_model.bin
+# models/pytorch_model.bin
 
 # Streamlit
 .streamlit/secrets.toml

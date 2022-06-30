@@ -14,7 +14,7 @@ def main():
             "Keterangan label pada dataset akan ditampilkan di bawah."
         )
         st.info(
-            "Non Hate Speech: 0"
+            "Non-Hate Speech: 0"
             "\n\nHate Speech Lemah: 1"
             "\n\nHate Speech Menengah: 2"
             "\n\nHate Speech Kuat: 3"
@@ -94,15 +94,6 @@ def main():
 
             image = Image.open("./data/output/best/confusion_matrix.png")
             st.image(image, caption="Confusion Matrix")
-
-    with st.expander("Diagram perbandingan label", expanded=True):
-        with st.container():
-            st.subheader("Diagram Perbandingan Label")
-
-            image = Image.open("./data/output/best/prediction_result.png")
-            st.image(
-                image, caption="Diagram Perbandingan Label Asli dengan Label Prediksi"
-            )
 
     with st.expander("Hasil Klasifikasi", expanded=True):
         with st.container():

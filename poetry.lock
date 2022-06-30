@@ -281,6 +281,17 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "emoji"
+version = "1.7.0"
+description = "Emoji for Python"
+category = "main"
+optional = false
+python-versions = "*"
+
+[package.extras]
+dev = ["pytest", "coverage", "coveralls"]
+
+[[package]]
 name = "entrypoint2"
 version = "1.0"
 description = "easy to use command-line interface for python modules"
@@ -2142,7 +2153,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "pytest-
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.9, <3.11"
-content-hash = "d64d95c789607775ec0eec909561b9110bb1f09c750ba9bf78d096d59e7f6a29"
+content-hash = "d306f8f20ac7a164cb4373d644203e559e286e620b4c432d5fe91eb47c955459"
 
 [metadata.files]
 absl-py = [
@@ -2347,6 +2358,9 @@ defusedxml = [
 easyprocess = [
     {file = "EasyProcess-1.1-py3-none-any.whl", hash = "sha256:82eed523a0a5eb12a81fa4eacd9f342caeb3f900eb4b798740e6696ad07e63f9"},
     {file = "EasyProcess-1.1.tar.gz", hash = "sha256:885898302a57aab948973e8b5d32a4229392b9fb2d986ab1d4ffd590e5ba90ec"},
+]
+emoji = [
+    {file = "emoji-1.7.0.tar.gz", hash = "sha256:65c54533ea3c78f30d0729288998715f418d7467de89ec258a31c0ce8660a1d1"},
 ]
 entrypoint2 = [
     {file = "entrypoint2-1.0-py3-none-any.whl", hash = "sha256:4d1f7609ae9fe9fa0f71406c0a278dd74f4adce70e1a445d87f08ebd26309c86"},

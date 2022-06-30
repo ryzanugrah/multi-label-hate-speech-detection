@@ -41,9 +41,8 @@ def main():
                 "dilabeli dari penelitian (Ibrohim & Budi, 2019). Total data yang didapatkan sebanyak 13169 data "
                 "yang terdiri dari 4 label, yaitu Non-Hate Speech sebanyak 5860 data, Weak Hate Speech sebanyak "
                 "3383 data, Moderate Hate Speech sebanyak 1705 data, dan Strong Hate Speech sebanyak 2221 data.\n\nHasil "
-                "pada penelitian ini menghasilkan nilai f1-score (macro avg) sebesar 76% pada data imbalance dan nilai "
-                "accuracy sebesar 77% pada data balance dengan set hyperparameter yang digunakan pada dua data tersebut "
-                "yaitu optimizer AdamW, activation function softmax, batch size 16, learning rate 2e-5, dan epoch 3."
+                "pada penelitian ini menghasilkan nilai f1-score (macro avg) sebesar 76% dengan set hyperparameter yang digunakan "
+                "yaitu batch size 16, learning rate 2e-5, dan epoch 3."
             )
 
         st.markdown("""---""")

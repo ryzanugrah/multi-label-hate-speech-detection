@@ -28,6 +28,7 @@ wheel = "^0.37.1"
 nvidia-pyindex = "^1.0.9"
 stqdm = "^0.0.4"
 opencv-python = "^4.6.0"
+emoji = "^1.7.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

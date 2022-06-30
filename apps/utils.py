@@ -2,6 +2,7 @@
 
 import base64
 import io
+import os
 import pickle
 import random
 import re
@@ -10,11 +11,11 @@ import time
 import timeit
 import uuid
 
-import gdown
 import matplotlib.pyplot as plt
 import nltk
 import numpy as np
 import pandas as pd
+import requests
 import seaborn as sns
 import streamlit as st
 import torch
@@ -35,6 +36,7 @@ from sklearn.metrics import (
 )
 from sklearn.model_selection import train_test_split
 from stqdm import stqdm
+from tqdm import tqdm
 from transformers import BertConfig, BertForSequenceClassification, BertTokenizer
 
 from apps import training_model
@@ -45,6 +47,10 @@ from apps.indonlu.utils.data_utils import (
 from apps.indonlu.utils.forward_fn import forward_sequence_classification
 from apps.indonlu.utils.metrics import multi_label_hate_speech_classification_metrics_fn
 
+# ------------------
+# Load Trained Model
+# ------------------
+
 # Load trained tokenizer with pickle
 tokenizer_path = "./models/tokenizer.pkl"
 with open(tokenizer_path, "rb") as handle:
@@ -52,10 +58,27 @@ with open(tokenizer_path, "rb") as handle:
 
 # Instantiate trained model
 config = BertConfig.from_pretrained("./models/config.json")
-
-url = "https://drive.google.com/u/0/uc?id=11TZavHOFMZ9fjsxZU3T34FuzbrU1uvIf"
 output = "./models/pytorch_model.bin"
-gdown.download(url, output, quiet=False)
+
+# Download trained model if does not exist
+if not os.path.isfile(output):
+    # URL of the trained model to be downloaded is defined as url
+    url = "https://github.com/ryzanugrah/multi-label-hate-speech-detection/raw/develop/models/pytorch_model.bin"
+    response = requests.get(url, stream=True)  # Create HTTP response object
+    total_size = int(response.headers.get("content-length", 0))
+
+    # Send a HTTP request to the server and save the HTTP response in a response object called output
+    with open(output, "wb") as file, tqdm(
+        desc="Downloading model",
+        total=total_size,
+        unit="iB",
+        unit_scale=True,
+        unit_divisor=1024,
+    ) as bar:
+        for data in response.iter_content(chunk_size=1024):
+            size = file.write(data)
+            bar.update(size)
+
 model = BertForSequenceClassification.from_pretrained(output, config=config)
 
 preprocess_input = lambda x: preprocessing(x)
@@ -477,7 +500,7 @@ def set_hyperparameter():
             (16, 32),
             help=(
                 "Nilai yang menentukan jumlah sampel data yang disebar pada setiap iterasi pelatihan, "
-                "semakin besar nilainya maka memori yang digunakan semakin banyak."
+                "semakin kecil nilainya maka memori perangkat yang digunakan semakin sedikit."
             ),
             key="batch_size",
         )
@@ -486,7 +509,7 @@ def set_hyperparameter():
             (2e-5, 3e-5, 5e-5),
             help=(
                 "Nilai yang menentukan seberapa banyak koreksi bobot yang akan diubah, "
-                "semakin besar nilainya maka pelatihan akan kurang optimal karena proses yang semakin cepat."
+                "semakin kecil nilainya maka algoritma pembelajaran akan semakin teliti dalam melakukan pelatihan."
             ),
             key="lr",
         )
@@ -495,19 +518,21 @@ def set_hyperparameter():
             (2, 3, 4),
             help=(
                 "Nilai yang menentukan berapa kali pelatihan mengolah seluruh dataset, "
-                "semakin besar nilainya maka semakin baik tingkat akurasinya."
+                "semakin kecil nilainya maka proses pelatihan semakin cepat."
             ),
             key="epochs",
         )
 
-        random_state = 0
-        eps = 1e-8
-        max_seq_len = 512
-        num_workers = 1
         attention_probs_dropout_prob = 0.1
         hidden_dropout_prob = 0.1
+
+        max_seq_len = 512
         num_labels = 4
+        num_workers = 1
+        eps = 1e-8
         weight_decay = 1e-2
+
+        random_state = 0
 
         with st.sidebar:
             st.header("Detail Hyperparameter")
@@ -2160,83 +2185,83 @@ def evaluate_model():
                 )
             )
 
-        st.markdown("""---""")
+        # st.markdown("""---""")
 
-        with st.container():
-            st.subheader("Diagram Perbandingan Label")
-            st.caption("Diagram perbandingan label asli dengan label prediksi.")
+        # with st.container():
+        #     st.subheader("Diagram Perbandingan Label")
+        #     st.caption("Diagram perbandingan label asli dengan label prediksi.")
 
-            with st.spinner("Menampilkan Diagram perbandingan..."):
-                """Show compare result on chart."""
+        #     with st.spinner("Menampilkan Diagram perbandingan..."):
+        #         """Show compare result on chart."""
 
-                fig, (ax1, ax2) = plt.subplots(
-                    1, 2, figsize=(20, 10), subplot_kw=dict(aspect="equal")
-                )
-                labels = "Non_HS", "HS_Weak", "HS_Moderate", "HS_Strong"
-                labels = [x.split()[-1] for x in labels]
+        #         fig, (ax1, ax2) = plt.subplots(
+        #             1, 2, figsize=(20, 10), subplot_kw=dict(aspect="equal")
+        #         )
+        #         labels = "Non_HS", "HS_Weak", "HS_Moderate", "HS_Strong"
+        #         labels = [x.split()[-1] for x in labels]
 
-                # True result
-                sizes = [
-                    amount_of_true_non_hs,
-                    amount_of_true_hs_weak,
-                    amount_of_true_hs_moderate,
-                    amount_of_true_hs_strong,
-                ]
-                explode = (0.1, 0, 0, 0)
+        #         # True result
+        #         sizes = [
+        #             amount_of_true_non_hs,
+        #             amount_of_true_hs_weak,
+        #             amount_of_true_hs_moderate,
+        #             amount_of_true_hs_strong,
+        #         ]
+        #         explode = (0.1, 0, 0, 0)
 
-                ax1.pie(
-                    sizes,
-                    explode=explode,
-                    labels=labels,
-                    autopct="%1.1f%%",
-                    shadow=True,
-                    startangle=90,
-                    textprops=dict(color="white", weight="bold"),
-                )
-                ax1.axis("equal")
-                ax1.set_title("Labeling True Result")
+        #         ax1.pie(
+        #             sizes,
+        #             explode=explode,
+        #             labels=labels,
+        #             autopct="%1.1f%%",
+        #             shadow=True,
+        #             startangle=90,
+        #             textprops=dict(color="white", weight="bold"),
+        #         )
+        #         ax1.axis("equal")
+        #         ax1.set_title("Labeling True Result")
 
-                # Prediction result
-                sizes = [
-                    amount_of_pred_non_hs,
-                    amount_of_pred_hs_weak,
-                    amount_of_pred_hs_moderate,
-                    amount_of_pred_hs_strong,
-                ]
-                explode = (0.1, 0, 0, 0)
+        #         # Prediction result
+        #         sizes = [
+        #             amount_of_pred_non_hs,
+        #             amount_of_pred_hs_weak,
+        #             amount_of_pred_hs_moderate,
+        #             amount_of_pred_hs_strong,
+        #         ]
+        #         explode = (0.1, 0, 0, 0)
 
-                ax2.pie(
-                    sizes,
-                    explode=explode,
-                    labels=labels,
-                    autopct="%1.1f%%",
-                    shadow=True,
-                    startangle=90,
-                    textprops=dict(color="white", weight="bold"),
-                )
-                ax2.axis("equal")
-                ax2.set_title("Labeling Prediction Result")
+        #         ax2.pie(
+        #             sizes,
+        #             explode=explode,
+        #             labels=labels,
+        #             autopct="%1.1f%%",
+        #             shadow=True,
+        #             startangle=90,
+        #             textprops=dict(color="white", weight="bold"),
+        #         )
+        #         ax2.axis("equal")
+        #         ax2.set_title("Labeling Prediction Result")
 
-                # Set legend label
-                ax1.legend(
-                    labels,
-                    title="Label",
-                    loc="center left",
-                    bbox_to_anchor=(1, 0, 0.5, 1),
-                )
+        #         # Set legend label
+        #         ax1.legend(
+        #             labels,
+        #             title="Label",
+        #             loc="center left",
+        #             bbox_to_anchor=(1, 0, 0.5, 1),
+        #         )
 
-                ax1.plot()
-                ax2.plot()
+        #         ax1.plot()
+        #         ax2.plot()
 
-                time.sleep(3)
+        #         time.sleep(3)
 
-            st.pyplot(fig)
-            st.markdown(
-                get_plt_image_download_link(
-                    fig, "prediction_result.png", "Unduh hasil prediksi"
-                ),
-                unsafe_allow_html=True,
-            )
+        #     st.pyplot(fig)
+        #     st.markdown(
+        #         get_plt_image_download_link(
+        #             fig, "prediction_result.png", "Unduh hasil prediksi"
+        #         ),
+        #         unsafe_allow_html=True,
+        #     )
 
     with st.expander(
         "Klasifikasi Teks/Kalimat dengan model yang telah dilatih", expanded=True
@@ -2282,20 +2307,6 @@ def evaluate_model():
             st.write("")
 
             text = "Semua orang #indocina adalah kecoa-kecoa busuk pencari untung dan harus diusir jauh-jauh!!"
-            subwords = tokenizer.encode(text)
-            subwords = torch.LongTensor(subwords).view(1, -1).to(model.device)
-
-            logits = model(subwords)[0]
-            label = torch.topk(logits, k=1, dim=-1)[1].squeeze().item()
-
-            st.write(f"Text: {text}")
-            st.write(
-                f"Label: {i2w[label]} ({F.softmax(logits, dim=-1).squeeze()[label] * 100:.3f}%)"
-            )
-
-            st.write("")
-
-            text = "kemaren gue ga di ajak tai emang"
             subwords = tokenizer.encode(text)
             subwords = torch.LongTensor(subwords).view(1, -1).to(model.device)
 
